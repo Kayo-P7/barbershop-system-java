@@ -15,8 +15,7 @@ public class Program {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Name: ");
-        String Name = sc.next();
-        sc.next();
+        String Name = sc.nextLine();
         System.out.println("Enter number phone (91-900000000): ");
         String Number = sc.next();
         Client client = new Client(Name, Number);
@@ -27,7 +26,7 @@ public class Program {
 
 
         ConexaoJ conexaoJ = new ConexaoJ();
-        InsertClient insertClient = new InsertClient();
+        InsertClient insertClient = new InsertClient(conexaoJ, client, barbearia);
     }
 }
 

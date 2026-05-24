@@ -7,11 +7,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class InsertClient {
-    private ConexaoJ conn = new ConexaoJ();
 
 
 
-    public InsertClient(Client client, Barbearia barbearia) throws SQLException {
+    public InsertClient(ConexaoJ conn, Client client, Barbearia barbearia) throws SQLException {
         String sql = "INSERT INTO client (telephone, nome, scheduling_date) VALUES (?, ?, ?)";
 
         PreparedStatement ps = conn.getConn().prepareStatement(sql);

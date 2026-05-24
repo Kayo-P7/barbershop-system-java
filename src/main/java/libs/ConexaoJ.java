@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConexaoJ {
 
-    final String url = "jdbc:mysql://localhost:3306/BARBEARIA";
+    final String url = "jdbc:mysql://localhost:3306/BARBEARIA_CADASTRO";
     final String user = "root";
     final String password = "";
 
@@ -20,7 +20,7 @@ public class ConexaoJ {
 
         try {
             conn = DriverManager.getConnection(url, user, password);
-
+            System.out.println("Connected!");
         } catch (SQLException e) {
             System.out.println(e);
         }
